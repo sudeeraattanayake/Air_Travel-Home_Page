@@ -1,0 +1,146 @@
+:root {
+    --logo-blue: #1d4ed8;
+    --logo-orange: #ff7e00;
+    --logo-red: #ff0000;
+    --white: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+/* Header */
+header {
+    background: var(--white);
+    padding: 1rem 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    position: relative;
+    z-index: 10;
+}
+
+.main-logo {
+    height: 50px;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+.btn-login {
+    border: 2px solid var(--logo-blue);
+    background: transparent;
+    color: var(--logo-blue);
+    padding: 8px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/* Hero & Animation */
+.hero {
+    height: 90vh;
+    background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    color: white;
+}
+
+.gradient-text {
+    background: linear-gradient(to right, var(--logo-orange), var(--logo-red));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.hero-content {
+    text-align: center;
+    z-index: 5;
+}
+
+.hero-content h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+}
+
+/* Booking Card */
+.booking-container {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 2rem;
+    border-radius: 15px;
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.form-group input {
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    margin-top: 5px;
+}
+
+.search-btn {
+    background: linear-gradient(90deg, var(--logo-orange), var(--logo-red));
+    color: white;
+    border: none;
+    padding: 0 25px;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    height: 40px;
+    align-self: flex-end;
+}
+
+/* Plane Animation */
+.plane-path {
+    position: absolute;
+    bottom: -100px;
+    left: -100px;
+}
+
+.plane-icon {
+    font-size: 60px;
+    background: linear-gradient(45deg, var(--logo-orange), var(--logo-red));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    transform: rotate(45deg);
+    animation: takeoff 7s infinite linear;
+}
+
+@keyframes takeoff {
+    0% { transform: translate(0, 0) rotate(45deg); opacity: 0; }
+    10% { opacity: 1; }
+    90% { opacity: 1; }
+    100% { transform: translate(110vw, -110vh) rotate(45deg); opacity: 0; }
+}

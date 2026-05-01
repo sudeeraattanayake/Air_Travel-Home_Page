@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Air Travel Online Agency | Book Your Flight</title>
+    <!-- FontAwesome for the Plane Icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <nav>
+            <div class="logo-area">
+                <!-- Reference to image.png logo -->
+                <img src="travel.png.jpeg" alt="Air Travel Logo" class="main-logo">
+            </div>
+            <ul class="nav-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Destinations</a></li>
+                <li><a href="#">Packages</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+            <button class="btn-login">Partner Login</button>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <!-- Animated Background Elements -->
+        <div class="sky-gradient"></div>
+        
+        <div class="hero-content">
+            <h1>Fly Beyond <span class="gradient-text">Boundaries</span></h1>
+            <p>Experience the world with our premium online ticketing agency.</p>
+
+            <!-- Glassmorphism Booking Form -->
+            <div class="booking-container">
+                <div class="form-group">
+                    <label><i class="fa-solid fa-plane-departure"></i> From</label>
+                    <input type="text" placeholder="City or Airport">
+                </div>
+                <div class="form-group">
+                    <label><i class="fa-solid fa-plane-arrival"></i> To</label>
+                    <input type="text" placeholder="City or Airport">
+                </div>
+                <div class="form-group">
+                    <label><i class="fa-solid fa-calendar-days"></i> Date</label>
+                    <input type="date">
+                </div>
+                <button class="search-btn">Search Flights</button>
+            </div>
+        </div>
+
+        <!-- The Realistic Plane Animation -->
+        <div class="plane-path">
+            <i class="fa-solid fa-plane plane-icon"></i>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
